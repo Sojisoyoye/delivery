@@ -23,9 +23,9 @@ class Package {
       sentOn: moment.now().format('llll'),
       deliveredOn: moment.now().format('llll'),
       status: data.status || '',
-      from: data.from,
-      to: data.to,
-      currentLocation: data.currentLocation,
+      from: data.from || '',
+      to: data.to || '',
+      currentLocation: data.currentLocation || '',
     };
     this.packages.push(newPackage);
     return newPackage;
