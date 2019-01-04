@@ -20,12 +20,12 @@ class PackageModel {
       id: uuidv4(),
       weight: data.weight || '',
       weightmetric: data.weightmetric || '',
-      sentOn: moment.now().format('llll'),
-      deliveredOn: moment.now().format('llll'),
-      status: data.status || '',
+      sentOn: moment().format('llll'),
+      deliveredOn: moment().format('llll'),
+      // status: data.status || '',
       from: data.from || '',
       to: data.to || '',
-      currentLocation: data.currentLocation || '',
+      // currentLocation: data.currentLocation || '',
     };
     this.packages.push(newPackage);
     return newPackage;
