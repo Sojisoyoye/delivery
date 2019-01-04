@@ -1,7 +1,7 @@
 import moment from 'moment';
 import uuidv4 from 'uuid/v4';
 
-class Package {
+class PackageModel {
   /**
      * class constructor
      * @param {object} data
@@ -58,7 +58,7 @@ class Package {
     const index = this.packages.indexOf(pckg);
     this.packages[index].deliveredOn = moment.now().format('llll');
     this.packages[index].status = data.status || pckg.status;
-    this.packages[index].currentLocation = data.currentLocation || pckg.currentLocation;
+    // this.packages[index].currentLocation = data.currentLocation || pckg.currentLocation;
     return this.packages[index];
   }
 
@@ -74,4 +74,4 @@ class Package {
   }
 }
 
-export default new Package();
+export default new PackageModel();
