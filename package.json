@@ -4,7 +4,8 @@
   "description": "A simple Rest API built using Node/Express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node_modules/.bin/nodemon index.js --exec babel-node --",
+    "test": "mocha ./tests --recursive"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,15 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "chai-http": "^4.2.1",
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
   }
 }
